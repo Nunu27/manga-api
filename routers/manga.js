@@ -4,6 +4,45 @@ const baseUrl = require("../constants/urls");
 const replaceMangaPage = "https://komiku.id/manga/";
 const AxiosService = require("../helpers/axiosService");
 
+// Home WIP
+// router.get('/home', async (req, res) => {
+//   let pagenumber = req.params.pagenumber;
+//   let url = 'https://komiku.co.id/';
+
+//   try {
+//     const response = await AxiosService(url);
+//     if (response.status === 200) {
+//       const $ = cheerio.load(response.data);
+//       let trending = [], crazy_update = [], latest = [], popular = [];
+//       let title, type, updated_on, endpoint, thumb, chapter;
+
+//       // Trending handler
+//       $('#Trending div.cv, div.ls23').each((i, elem) => {
+//         if(i == 0) {
+//           title = $(elem).find('h3').text();
+//           type
+//         } else {
+
+//         }
+//       })
+//       return res.status(200).json({
+//         status: true,
+//         message: "success",
+//         manga_list,
+//       });
+//     }
+//     return res.send({
+//       message: response.status,
+//       manga_list: [],
+//     });
+//   } catch (err) {
+//     res.send({
+//       status: false,
+//       message: err,
+//       manga_list: [],
+//     });
+//   }
+// })
 // manga popular ----Ignore this for now --------
 router.get("/manga/popular", async (req, res) => {
   res.send({
